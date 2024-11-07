@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucs Football</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            
+                <img src="images/um.png" alt=" Logo" class="logo">
+            <nav id="sideNav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#athletes">Athletes</a></li>
+                    <li><a href="#schedule">Schedule</a></li>
+                    <li><a href="#highlight-reel">Highlights</a></li>
+                    <li><a href="#comment-form">Fan Comments</a></li>
+                    <li><a href="#wallpapers">Wallpapers</a></li>
+                </ul>
+            </nav>
+            <img src="images/menu.png" id="menuBtn">
+        </div>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="header-col-1">
+                <h1>Tampa Bay <span class="highlight">Buccaneers</span> <span class="highlight">Football</span></h1>
+                <div class="color-options">
+                    <button class="color-btn" data-bgcolor="#97162d">Red Theme</button>
+                    <button class="color-btn" data-bgcolor="#000000" data-textcolor="#ffffff">Dark Theme</button>
+                    <button class="color-btn" data-bgcolor="#ffffff" data-textcolor="#8b7272">Light Theme</button>
+                    <button class="color-btn" data-bgcolor="#8439df" data-textcolor="#ffffff">Purple Theme</button>
+                    <button class="color-btn" data-bgcolor="#828A8F" data-textcolor="#ffffff">Grey Theme</button>
+                    <button class="alabama-logo-btn" data-bgimage="url('images/images.png')">Bucs Logo</button>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <section id="about">
+            <h2 class="sub-title">About Tampa Bay Buccaneers</h2>
+            <div class="about-content">
+                <div class="about-col-1">
+                    <img src="images/yeah baby.png" alt="Raymond James Stadium, Tampa Bay">
+                </div>
+                <div class="about-col-2">
+                    <p>The Tampa Bay Buccaneers football program proudly represents the Tampa Bay area in the highly competitive world of professional football, where it has established itself as a dominant force. With a rich and storied history spanning over a century, the team is renowned for its remarkable success on the field, which includes winning numerous Super Bowl championships and producing countless All-Pro athletes.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="athletes">
+            <h2 class="sub-title">Featured Athletes</h2>
+            <div class="portfolio-list">
+                <div class="portfolio-item">
+                    <div class="featured-athlete">
+                        <img src="images/athlete-1.jpg" alt="Tua Tagovailoa">
+                        <div class="layer overlay">
+                            <h3>Ronde Barber</h3>
+                            <p>Ronde Barber was a defensive powerhouse for the Bucs, known for his versatility and intelligence on the field. He spent his entire career in Tampa Bay, becoming one of the best cornerbacks in NFL history with his iconic pick-six in the 2002 NFC Championship game, helping lead the Bucs to their first Super Bowl win.</p>
+                            <a href="#" target="_blank" onclick="window.open('https://www.youtube.com/watch?v=V_r5RCjRdqM', '_blank'); return false;" class="highlight-btn">View Highlights</a> 
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="featured-athlete">
+                        <img src="images/athlete-2.jpg" alt="Derrick Henry">
+                        <div class="layer overlay">
+                            <h3>Mike Evans</h3>
+                            <p>Mike Evans is one of the most dominant wide receivers in the league, known for his remarkable catching ability and physicality. As the Bucs' all-time leader in receiving yards and touchdowns, he's a fan favorite who helped the team secure their 2020 Super Bowl victory.</p>
+                            <a href="#" target="_blank" onclick="window.open('https://www.youtube.com/watch?v=uPD6tdCEdFQ', '_blank'); return false;" class="highlight-btn">View Highlights</a> 
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="featured-athlete">
+                        <img src="images/athlete-3.jpg" alt="DeVonta Smith">
+                        <div class="layer overlay">
+                            <h3>Mike Alstott</h3>
+                            <p>Known as the “A-Train,” Mike Alstott was a relentless fullback who plowed through defenses with sheer power and determination. A key player in the 2002 Super Bowl team, his aggressive playing style and loyalty to the Bucs have made him a legendary player to the frachise and all Bucs fans.</p>
+                            <a href="#" target="_blank" onclick="window.open('https://www.youtube.com/watch?v=tQhkbY14Q54', '_blank'); return false;" class="highlight-btn">View Highlights</a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+     
+
+        
+
+        <section id="schedule">
+            <h2 class="sub-title">2024 Bucs Schedule</h2>
+            <div id="live-score" class="live-score"></div>
+            <div id="countdown" class="countdown"></div>
+            <div class="schedule-list"></div>
+            <div class="learn-more">
+                <!-- Opens full schedule in a new tab -->
+                <section id="results">
+                <div class="recent-results-section">
+                    <h2>Recent Results</h2>
+                    <div class="results-list"></div>
+                    <button id="load-more-results">Load More Results</button>
+                </div>
+                
+                
+        <!-- Fan Poll Section -->
+        <div id="countdown"></div>
+        <section id="fanpoll">
+            <h2 class="sub-title">Fan Poll: Who's Your MVP?</h2>
+            <form id="poll-form">
+                <label for="player-name">Enter Player Name:</label>
+                <input type="text" id="player-name" name="player-name" required>
+                <button type="submit">Vote!</button>
+            </form>
+            <div id="poll-results"></div>
+        </section>
+
+        <!-- Highlight Reel Section -->
+        <section id="highlight-reel">
+            <h2 class="sub-title">Bucs Highlights</h2>
+            <div id="video-container">
+                <iframe id="video-player" width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+            <button id="play-video">Play</button>
+            <button id="next-highlight">Next Highlight</button>
+        </section>
+    </main>
+      
+   
+   
+    
+    <!-- News Ticker -->
+       <div id="news-ticker" class="news-ticker">Latest News: Welcome to the &copy; unoffical Tampa Bay Buccaneers Fan Page</div>
+
+       <!-- Fan Comments Section -->
+      
+
+       <div>
+        <h2>Fan Comments</h2>
+        <form id="comment-form">
+            <input type="text" id="comment-text" placeholder="Leave a comment..." required />
+            <button type="submit">Submit</button>
+        </form>
+        <div id="comment-list"></div>
+    </div>
+       <!-- Player Comparison Tool -->
+       <section id="player-comparison">
+        <h2 class="sub-title">Player Comparison</h2>
+        <select id="player1">
+            <option value="Mike Evans">Mike Evans</option>
+            <option value="Tom Brady">Tom Brady</option>
+            <option value="Warrick Dunn">Warrick Dunn</option>
+            <option value="Keyshawn Johnson">Keyshawn Johnson</option>
+            <option value="Vinny Testaverde">Vinny Testaverde</option>
+            <option value="Doug Williams">Doug Williams</option>
+        </select>
+        <select id="player2">
+            <option value="Mike Evans">Mike Evans</option>
+            <option value="Tom Brady">Tom Brady</option>
+            <option value="Warrick Dunn">Warrick Dunn</option>
+            <option value="Keyshawn Johnson">Keyshawn Johnson</option>
+            <option value="Vinny Testaverde">Vinny Testaverde</option>
+            <option value="Doug Williams">Doug Williams</option>
+        </select>
+        <button onclick="comparePlayers()">Compare</button>
+        <div id="comparison-result"></div>
+    </section>
+       <!-- Trivia Quiz -->
+       <section id="trivia-quiz">
+        <h2 class="sub-title">Bucs Trivia</h2>
+        <div id="question-container">
+            <p id="trivia-question">Loading question...</p>
+            <input type="text" id="answer" placeholder="Your Answer">
+            <button onclick="checkAnswer()">Submit</button>
+        </div>
+        <div id="quiz-result"></div>
+    </section>
+
+
+
+    
+        <!--Merch Shop-->
+
+
+    <section id="merch-shop">
+        <h2>Bucs Merch Shop</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="images/jersey.png" alt="Alabama Jersey">
+                <h3>Bucs Jersey</h3>
+                <p>$129.99 - 174.99</p>
+                <button onclick="window.location.href='https://shop.buccaneers.com/tampa-bay-buccaneers-jerseys/t-70715023+d-2360449024+z-8-1169384604'"  >Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="images/hat.png" alt="Alabama Hat">
+                <h3>Bucs Hat</h3>
+                <p>$16.99 - $41.99</p>
+                <button onclick="window.location.href='https://shop.buccaneers.com/tampa-bay-buccaneers-hats/t-47040534+d-6715115508+z-92-978216006'">Buy Now</button>
+            </div>
+            <!-- Add more product-cards as needed -->
+        </div>
+    </section>
+    
+     <!-- Player Stats History -->
+
+   
+     <section class="chart-section">
+        <h2>Player Stats History</h2>
+        <canvas id="statsChart"></canvas>
+    </section>
+
+    
+    <section id="wallpapers">
+        <h2>Download Custom Bucs Wallpapers</h2>
+        <div class="wallpaper-grid">
+            <div class="wallpaper-card">
+                <img src="images/wallpaper-1.jpg" alt="Wallpaper 1">
+                    <a href="https://wallpapers.com/wallpapers/buccaneers-bucco-bruce-7p58quyb3pb8klw8/download" target="_blank" class="wallpaper-btn">Download</a>
+            </div>
+            <div class="wallpaper-card">
+                <img src="images/wallpaper-2.jpg" alt="Wallpaper 2">
+                <a href="https://wallpapers.com/wallpapers/buccaneers-grunge-bwlnsic8aplfmchs/download" target="_blank" class="wallpaper-btn">Download</a>
+                
+            </div>
+            <div class="wallpaper-card">
+                <img src="images/wallpaper-3.jpg" alt="Wallpaper 3">
+                <a href="https://wallpapers.com/wallpapers/buccaneers-glovers-mywufn4kyz2vdsqi/download" target="_blank" class="wallpaper-btn">Download</a>
+            </div>
+            <!-- Add more wallpaper cards as needed -->
+        </div>
+    </section>
+    
+    
+    <!-- Historical Highlights Timeline -->
+
+
+    <section id="historical-timeline">
+        <h2 class="sub-title">Buc's History</h2>
+        <div class="timeline">
+            <div class="timeline-item"><p><strong>Early Years (1976-1996)</strong> - The Tampa Bay Buccaneers joined the NFL as an expansion team in 1976. Despite initial struggles, including a 26-game losing streak, the team gradually improved. Under head coach John McKay, the Bucs reached the NFC Championship game in 1979, just their fourth season in the league.</p></div>
+            <div class="timeline-item"><p><strong>Rise to Prominence (1997-2001)</strong> - The late 1990s saw the Buccaneers emerge as a formidable team. Led by head coach Tony Dungy and a stellar defense featuring Warren Sapp and Derrick Brooks, the Bucs became perennial playoff contenders. This era laid the foundation for future success.</p></div>
+            <div class="timeline-item"><p><strong>Super Bowl XXXVII Champions (2002)</strong> - The 2002 season marked the pinnacle of Buccaneers' success. Under new head coach Jon Gruden, Tampa Bay dominated the Oakland Raiders 48-21 in Super Bowl XXXVII. This victory showcased the team's powerful defense and efficient offense, bringing the first championship to Tampa Bay.</p></div>
+            <div class="timeline-item"><p><strong>Rebuilding and Transition (2003-2019)</strong> -  Following their Super Bowl win, the Buccaneers experienced ups and downs. Despite occasional playoff appearances, the team went through several coaching changes and roster rebuilds. This period was characterized by the search for consistent success and a return to championship form.</p></div>
+            <div class="timeline-item"><p><strong>Brady Era and Super Bowl LV (2020-Present)</strong> - The arrival of quarterback Tom Brady in 2020 ushered in a new era of success. In Brady's first season, the Buccaneers won Super Bowl LV, defeating the Kansas City Chiefs 31-9. This victory, achieved in their home stadium, Raymond James Stadium, marked a resurgence for the franchise and solidified their status as one of the NFL's elite teams.</p></div>
+        </div>
+    </section>
+
+    <!-- Game Day Popup -->
+    <div id="game-day-popup" class="popup">
+        <h2>It’s Game Day!</h2>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+   
+    
+   <!-- Current Roster -->
+   <section id="roster">
+    <h2 class="sub-title">Current Roster</h2>
+    <div class="roster-list">
+        <div class="player-item"><strong>Quarterback:</strong> Baker Mayfield</div>
+        <div class="player-item"><strong>Running Backs:</strong> Rachaad White, Bucky Irving</div>
+        <div class="player-item"><strong>Wide Receivers:</strong> Mike Evans, Chris Godwin</div>
+        <div class="player-item"><strong>Tight End:</strong> Cameron Brate</div>
+        <div class="player-item"><strong>Standout Defensive Players:</strong> Vita Vea, Lavonte David, Antoine Winfield Jr., Shaq Barret, Jordan Whitehead</div>
+        <div class="player-item"><strong>Kicker:</strong> Chase McLaughlin</div>
+    </div>
+</section>
+
+   
+
+</section>
+        <!-- Opens full schedule in a new tab -->
+        <div class="learn-more">
+            <a href="https://buccaneers.com" target="_blank" class="learn-more-btn">Learn More</a>
+        </div>
+        
+</section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Pro-Master Painting Inc. All rights reserved.</p>
+    </footer>
+
+    <!-- Link to JavaScript file -->
+    <script src="script.js"></script> 
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+    <!-- Inline Script for Video -->
+    <script>
+        // Array of YouTube video IDs
+        const videoIds = ['qx93e3TBktY', 'JGwGXA7hqdg', 'yYk0q-HGphE', 'ae4vpzIxL6k']; // Replace with your actual video IDs
+        let currentVideoIndex = 0;
+
+        const videoPlayer = document.getElementById('video-player');
+        const playButton = document.getElementById('play-video');
+        const nextButton = document.getElementById('next-highlight');
+
+        // Function to load and play the video
+        function playVideo(videoId) {
+            videoPlayer.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+        }
+
+        // Play current video on button click
+        playButton.addEventListener('click', function() {
+            playVideo(videoIds[currentVideoIndex]);
+        });
+
+        // Load next video on button click
+        nextButton.addEventListener('click', function() {
+            currentVideoIndex = (currentVideoIndex + 1) % videoIds.length;
+            playVideo(videoIds[currentVideoIndex]);
+        });
+
+    </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+</body>
+</html>
